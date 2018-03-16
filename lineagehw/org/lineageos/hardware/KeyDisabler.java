@@ -27,19 +27,3 @@ import org.lineageos.internal.util.FileUtils;
  * otherwise visible-when-inactive keys
  */
 
-public class KeyDisabler {
-
-    private static String CONTROL_PATH = "/sys/devices/virtual/touch/tp_dev/key_enable";
-
-    public static boolean isSupported() {
-        return FileUtils.isFileWritable(CONTROL_PATH);
-    }
-
-    public static boolean isActive() {
-        return FileUtils.readOneLine(CONTROL_PATH).equals("0");
-    }
-
-    public static boolean setActive(boolean state) {
-        return FileUtils.writeLine(CONTROL_PATH, (state ? "0" : "1"));
-    }
-}

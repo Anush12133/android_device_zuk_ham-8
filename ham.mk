@@ -173,6 +173,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/msm8974-taiko-mtp-snd-card_Button_Jack.kl:system/vendor/usr/keylayout/msm8974-taiko-mtp-snd-card_Button_Jack.kl \
     $(LOCAL_PATH)/keylayout/fpc1020tp.kl:system/vendor/usr/keylayout/fpc1020tp.kl
 
+# LiveDisplay native
+PRODUCT_PACKAGES += \
+ vendor.lineage.livedisplay@1.0-service-sdm
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8974
