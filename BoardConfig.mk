@@ -93,8 +93,8 @@ TARGET_USE_VENDOR_CAMERA_EXT 		:= true
 USE_DEVICE_SPECIFIC_CAMERA 		:= true
 TARGET_USES_NON_TREBLE_CAMERA 		:= true
 TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE := true
-TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-/system/vendor/bin/mm-qcamera-daemon=23
+PRODUCT_COPY_FILES += \
+device/zuk/ham/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK 	:= true
